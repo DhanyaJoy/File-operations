@@ -1,15 +1,6 @@
 ﻿namespace File_operations
 {
     [TestClass]
-    public class Customer
-    {
-      public int CustomerId;
-      public string CustomerName;
-      public string address;
-        
-        
-    }
-        [TestClass]
     public class CustomerReadWriteToFile
     {
         [TestMethod]
@@ -32,12 +23,13 @@
             File.AppendAllText(@"D:\github\File-operations\WriteText.txt", "This is appending a line of text to an existing line");
 
         }
+        [TestMethod]
         public void ReadFile()
         {
+            Customer customerobj2=new Customer();
             string text = System.IO.File.ReadAllText(@"D:\github\File-operations\WriteText.txt");
 
-            // Display the file contents to the console. Variable text is a string.
-            System.Console.WriteLine("Contents of WriteTextt.txt = {0}", text);
+                      
         }
     }
 }
